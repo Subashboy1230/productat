@@ -66,7 +66,7 @@ export function Hero() {
             style={{ animationDelay: "120ms" }}
           >
             Productat runs high-intensity hackathons and a year-round community
-            for product builders &mdash; engineers, designers, and founders.
+            for product builders: engineers, designers, and founders.
             Builders from every corner of the US, with a home base in the Bay
             Area.
           </p>

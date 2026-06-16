@@ -25,7 +25,7 @@ export function Sponsors() {
         <SectionHeading
           eyebrow="Sponsors & Partners"
           title="Backed by the tools builders actually use"
-          description="Sponsors put real infrastructure, credits, and mentors in the room — and meet the builders shipping on their stack first."
+          description="Sponsors put real infrastructure, credits, and mentors in the room, and meet the builders shipping on their stack first."
         />
 
         <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border ring-hairline sm:grid-cols-3 lg:grid-cols-4">

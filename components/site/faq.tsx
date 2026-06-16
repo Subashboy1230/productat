@@ -9,7 +9,7 @@ import {
 const faqs = [
   {
     q: "Who can apply?",
-    a: "Anyone who builds — engineers, designers, PMs, founders, and students. Come solo or with a team of up to four. You don't need a polished idea in advance; plenty of teams form Friday night.",
+    a: "Anyone who builds: engineers, designers, PMs, founders, and students. Come solo or with a team of up to four. You don't need a polished idea in advance; plenty of teams form Friday night.",
   },
   {
     q: "How much does it cost?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What can I build?",
-    a: "Anything that fits one of the tracks — AI agents, developer tools, consumer, fintech, hardware, or wildcard — and can demo live in two minutes. Working beats polished.",
+    a: "Anything that fits one of the tracks (AI agents, developer tools, consumer, fintech, hardware, or wildcard) and can demo live in two minutes. Working beats polished.",
   },
   {
     q: "Who owns what I build?",

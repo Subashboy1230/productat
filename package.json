@@ -2,7 +2,7 @@
   "name": "productat",
   "version": "1.0.0",
   "private": true,
-  "description": "Productat — hackathons and a product community for builders. Bay Area based, US-wide.",
+  "description": "Productat: hackathons and a product community for builders. Bay Area based, US-wide.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

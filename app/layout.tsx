@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Productat — Build. Ship. Belong.",
+  title: "Productat: Build. Ship. Belong.",
   description:
     "Productat runs hackathons and a year-round product community for builders across the US, based in the Bay Area. Ship something real in a weekend, then keep building with people who do the same.",
   metadataBase: new URL("https://productat.com"),
   openGraph: {
-    title: "Productat — Build. Ship. Belong.",
+    title: "Productat: Build. Ship. Belong.",
     description:
       "Hackathons and a product community for builders across the US, based in the Bay Area.",
     url: "https://productat.com",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Productat — Build. Ship. Belong.",
+    title: "Productat: Build. Ship. Belong.",
     description:
       "Hackathons and a product community for builders across the US, based in the Bay Area.",
   },

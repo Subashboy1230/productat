@@ -48,7 +48,7 @@ const messages = [
     initials: "MK",
     name: "maya.k",
     color: "from-sky-400 to-blue-600",
-    text: "shipped the v2 of our eval harness at last night's demo — repo in #open-source",
+    text: "shipped the v2 of our eval harness at last night's demo, repo in #open-source",
     meta: "2m",
   },
   {
@@ -62,7 +62,7 @@ const messages = [
     initials: "RT",
     name: "rosa.t",
     color: "from-cyan-400 to-sky-600",
-    text: "office hours with a seed fund opened up Thursday 3pm PT — grabbed a slot 🚀",
+    text: "office hours with a seed fund opened up Thursday 3pm PT, grabbed a slot 🚀",
     meta: "26m",
   },
 ];
@@ -85,7 +85,7 @@ export function Community() {
               </span>
             </>
           }
-          description="Productat is a year-round home for builders. The weekend is the spark — the community is where products, teams, and careers actually compound."
+          description="Productat is a year-round home for builders. The weekend is the spark. The community is where products, teams, and careers actually compound."
         />
 
         {/* wide member card with chat mock */}
