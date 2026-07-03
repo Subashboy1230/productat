@@ -4,30 +4,30 @@ import { Logo } from "@/components/site/logo";
 
 const columns = [
   {
-    title: "Event",
+    title: "Learn",
     links: [
-      ["Hackathon", "#hackathon"],
-      ["Schedule", "#hackathon"],
-      ["Prizes", "#hackathon"],
-      ["Apply", "#apply"],
+      ["UX / UI", "#learn"],
+      ["Product", "#learn"],
+      ["Tech & systems", "#learn"],
+      ["Go-to-market", "#learn"],
     ],
   },
   {
     title: "Community",
     links: [
-      ["Demo nights", "#community"],
-      ["Office hours", "#community"],
-      ["Member perks", "#community"],
-      ["Join free", "#community"],
+      ["Who it's for", "#community"],
+      ["Build nights", "#community"],
+      ["Mentors", "#community"],
+      ["Join the waitlist", "#waitlist"],
     ],
   },
   {
-    title: "Company",
+    title: "Event",
     links: [
-      ["Sponsors", "#sponsors"],
+      ["Inaugural hackathon", "#hackathon"],
       ["FAQ", "#faq"],
-      ["Code of conduct", "#"],
-      ["Contact", "#"],
+      ["Sign in", "/login"],
+      ["Contact", "mailto:hello@productat.com"],
     ],
   },
 ];
@@ -40,8 +40,8 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Hackathons and a product community for builders across the US.
-              Build. Ship. Belong.
+              A community of builders, by builders, helping non-technical people
+              ship 0-to-1 products. Build. Ship. Belong.
             </p>
             <div className="mt-5 flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 text-primary" />

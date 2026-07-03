@@ -1,11 +1,10 @@
 import { Navbar } from "@/components/site/navbar";
 import { Hero } from "@/components/site/hero";
-import { Stats } from "@/components/site/stats";
-import { Hackathon } from "@/components/site/hackathon";
+import { Learn } from "@/components/site/learn";
 import { Community } from "@/components/site/community";
-import { Sponsors } from "@/components/site/sponsors";
-import { FAQ } from "@/components/site/faq";
+import { Hackathon } from "@/components/site/hackathon";
 import { CTA } from "@/components/site/cta";
+import { FAQ } from "@/components/site/faq";
 import { Footer } from "@/components/site/footer";
 
 export default function Page() {
@@ -13,12 +12,11 @@ export default function Page() {
     <main className="relative min-h-screen overflow-x-clip">
       <Navbar />
       <Hero />
-      <Stats />
-      <Hackathon />
+      <Learn />
       <Community />
-      <Sponsors />
-      <FAQ />
+      <Hackathon />
       <CTA />
+      <FAQ />
       <Footer />
     </main>
   );

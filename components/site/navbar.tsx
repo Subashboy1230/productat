@@ -8,9 +8,9 @@ import { Logo } from "@/components/site/logo";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { label: "Hackathon", href: "#hackathon" },
+  { label: "Learn", href: "#learn" },
   { label: "Community", href: "#community" },
-  { label: "Sponsors", href: "#sponsors" },
+  { label: "Hackathon", href: "#hackathon" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -52,10 +52,10 @@ export function Navbar() {
 
         <div className="hidden items-center gap-2 md:flex">
           <Button variant="ghost" size="sm" asChild>
-            <a href="#community">Sign in</a>
+            <a href="/login">Sign in</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="#apply">Apply to build</a>
+            <a href="#waitlist">Join waitlist</a>
           </Button>
         </div>
 
@@ -82,13 +82,13 @@ export function Navbar() {
           ))}
           <div className="mt-2 grid grid-cols-2 gap-2 p-2">
             <Button variant="outline" size="sm" asChild>
-              <a href="#community" onClick={() => setOpen(false)}>
+              <a href="/login" onClick={() => setOpen(false)}>
                 Sign in
               </a>
             </Button>
             <Button size="sm" asChild>
-              <a href="#apply" onClick={() => setOpen(false)}>
-                Apply
+              <a href="#waitlist" onClick={() => setOpen(false)}>
+                Waitlist
               </a>
             </Button>
           </div>

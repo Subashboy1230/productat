@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Productat: Build. Ship. Belong.",
+  title: "Productat: build real products, 0 to 1",
   description:
-    "Productat runs hackathons and a year-round product community for builders across the US, based in the Bay Area. Ship something real in a weekend, then keep building with people who do the same.",
+    "Productat is a community of builders, by builders, helping non-technical people ship amazing tech products across UX/UI, engineering, product, and go-to-market. Join the waitlist for the inaugural hackathon in late July.",
   metadataBase: new URL("https://productat.com"),
   openGraph: {
-    title: "Productat: Build. Ship. Belong.",
+    title: "Productat: build real products, 0 to 1",
     description:
-      "Hackathons and a product community for builders across the US, based in the Bay Area.",
+      "A community of builders helping non-technical people ship 0-to-1 products. Join the waitlist for the inaugural hackathon.",
     url: "https://productat.com",
     siteName: "Productat",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Productat: Build. Ship. Belong.",
+    title: "Productat: build real products, 0 to 1",
     description:
-      "Hackathons and a product community for builders across the US, based in the Bay Area.",
+      "A community of builders helping non-technical people ship 0-to-1 products. Join the waitlist for the inaugural hackathon.",
   },
   icons: {
     icon: "/favicon.svg",

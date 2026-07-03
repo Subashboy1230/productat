@@ -12,34 +12,34 @@ import { SectionHeading } from "@/components/site/section-heading";
 
 const perks = [
   {
-    icon: Presentation,
-    title: "Monthly demo nights",
-    body: "Ship something every month and show it live. Best demo gets the room, the feedback, and a slot on the newsletter.",
-  },
-  {
-    icon: MessagesSquare,
-    title: "Always-on builder channels",
-    body: "Thousands of builders trading code reviews, intros, and brutally honest feedback at every hour.",
-  },
-  {
     icon: Compass,
-    title: "Mentor & investor office hours",
-    body: "Weekly 1:1 slots with operators, designers, and funds who have shipped and funded real products.",
+    title: "Mentors across all four lenses",
+    body: "Designers, engineers, product folks, and operators who've shipped, on hand to unblock you on UX, tech, product, or go-to-market.",
   },
   {
-    icon: Handshake,
-    title: "Hiring & co-founder matching",
-    body: "Curated intros for roles, contracts, and co-founders. The network hires from inside the network first.",
+    icon: Presentation,
+    title: "Weekly build nights & workshops",
+    body: "Hands-on sessions that turn a concept into a screen, a screen into a working app, and a working app into something people can use.",
   },
   {
     icon: Hammer,
-    title: "Hands-on workshops",
-    body: "From eval harnesses to go-to-market, taught by people currently doing the thing, not talking about it.",
+    title: "Honest feedback on your product",
+    body: "Post work in progress and get real critique from people who want you to ship, not vague encouragement.",
+  },
+  {
+    icon: MessagesSquare,
+    title: "A cohort building alongside you",
+    body: "You're not learning alone. A room of builders and not-yet-builders moving idea to shipped at the same time keeps you honest.",
   },
   {
     icon: Gift,
-    title: "Member perks & credits",
-    body: "Cloud, API, and tooling credits, plus partner discounts that follow you long after the weekend.",
+    title: "Starters, templates & AI workflows",
+    body: "The shortcuts builders actually use, so you spend your energy on the product, not on reinventing setup.",
+  },
+  {
+    icon: Handshake,
+    title: "Intros that matter",
+    body: "Teammates for the hackathon, your first users, and people who've been where you're going.",
   },
 ];
 
@@ -48,22 +48,22 @@ const messages = [
     initials: "MK",
     name: "maya.k",
     color: "from-sky-400 to-blue-600",
-    text: "shipped the v2 of our eval harness at last night's demo, repo in #open-source",
+    text: "shipped my first landing page tonight, zero code, straight from Tuesday's workshop 🎉",
     meta: "2m",
   },
   {
     initials: "DJ",
-    name: "deon.builds",
+    name: "deon (non-tech founder)",
     color: "from-indigo-400 to-violet-600",
-    text: "anyone in NYC want to team up for the Sept hackathon? working on agent infra",
-    meta: "11m",
+    text: "finally get what an API actually does. six months of confusion gone in one session",
+    meta: "14m",
   },
   {
     initials: "RT",
     name: "rosa.t",
     color: "from-cyan-400 to-sky-600",
-    text: "office hours with a seed fund opened up Thursday 3pm PT, grabbed a slot 🚀",
-    meta: "26m",
+    text: "anyone want to pair for the hackathon? I'll bring product + GTM, looking for a build partner 🚀",
+    meta: "31m",
   },
 ];
 
@@ -76,16 +76,16 @@ export function Community() {
 
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeading
-          eyebrow="The Community"
+          eyebrow="The community"
           title={
             <>
-              The hackathon ends.{" "}
+              By builders.{" "}
               <span className="text-muted-foreground">
-                The momentum doesn&rsquo;t.
+                For the not-yet-technical.
               </span>
             </>
           }
-          description="Productat is a year-round home for builders. The weekend is the spark. The community is where products, teams, and careers actually compound."
+          description="Everyone here remembers being a beginner. Productat is people who've shipped, teaching people who want to, so you can go from idea to real product without a computer science degree."
         />
 
         {/* wide member card with chat mock */}
@@ -105,16 +105,16 @@ export function Community() {
                   />
                 ))}
                 <span className="grid h-9 w-9 place-items-center rounded-full border border-border bg-secondary text-xs font-medium text-muted-foreground ring-2 ring-card">
-                  +6k
+                  you
                 </span>
               </div>
               <h3 className="mt-6 text-2xl font-semibold tracking-tight">
-                One always-on room of people who ship
+                Who it&rsquo;s for
               </h3>
               <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
-                Join builders from 38 cities trading work in progress, finding
-                teammates, and pushing each other to put things in front of real
-                users. Quiet lurkers welcome. Shippers celebrated.
+                Non-technical founders, designers, PMs, domain experts, and
+                career-switchers with an idea and no clear path to build it.
+                Come curious, leave with a product and a crew that ships.
               </p>
             </div>
 
@@ -140,8 +140,10 @@ export function Community() {
                     </span>
                     <div className="min-w-0">
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-medium">{m.name}</span>
-                        <span className="text-xs text-muted-foreground">
+                        <span className="truncate text-sm font-medium">
+                          {m.name}
+                        </span>
+                        <span className="shrink-0 text-xs text-muted-foreground">
                           {m.meta}
                         </span>
                       </div>

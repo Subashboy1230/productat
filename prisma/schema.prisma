@@ -1,0 +1,186 @@
+// Productat hackathon backend schema
+// Auth.js (NextAuth) models + hackathon domain (projects, judging, rubric).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum Role {
+  HACKER
+  JUDGE
+  ADMIN
+}
+
+enum ProjectStatus {
+  DRAFT
+  SUBMITTED
+  UNDER_REVIEW
+  SCORED
+}
+
+// ---------- Auth.js core ----------
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  role          Role      @default(HACKER)
+  createdAt     DateTime  @default(now())
+
+  accounts Account[]
+  sessions Session[]
+
+  projects Project[]  @relation("ProjectOwner")
+  scores   Score[]
+  feedback Feedback[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ---------- Hackathon domain ----------
+
+model Project {
+  id          String        @id @default(cuid())
+  title       String
+  tagline     String?
+  description String?       @db.Text
+  repoUrl     String?
+  demoUrl     String?
+  videoUrl    String?
+  track       String?
+  teamMembers String?       @db.Text
+  status      ProjectStatus @default(DRAFT)
+  submittedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  ownerId String
+  owner   User   @relation("ProjectOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+
+  scores   Score[]
+  feedback Feedback[]
+
+  @@index([ownerId])
+  @@index([status])
+}
+
+// A judging metric (rubric line item). The "metric set" judges score against.
+model Metric {
+  id          String  @id @default(cuid())
+  name        String
+  description String?
+  weight      Float   @default(1)
+  maxScore    Int     @default(10)
+  order       Int     @default(0)
+  active      Boolean @default(true)
+
+  scores Score[]
+}
+
+// One judge's score for one project on one metric.
+model Score {
+  id        String   @id @default(cuid())
+  value     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  judgeId String
+  judge   User   @relation(fields: [judgeId], references: [id], onDelete: Cascade)
+
+  metricId String
+  metric   Metric @relation(fields: [metricId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, judgeId, metricId])
+  @@index([projectId])
+  @@index([judgeId])
+}
+
+// One judge's written feedback for one project (the quality-loop comment).
+model Feedback {
+  id        String   @id @default(cuid())
+  comment   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  judgeId String
+  judge   User   @relation(fields: [judgeId], references: [id], onDelete: Cascade)
+
+  @@unique([projectId, judgeId])
+  @@index([projectId])
+}
+
+// Allowlist: emails that should be granted the JUDGE role on sign-in.
+model JudgeInvite {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  note      String?
+  createdAt DateTime @default(now())
+}
+
+// Single-row global event settings controlling the quality-loop phases.
+model Settings {
+  id               Int     @id @default(1)
+  eventName        String  @default("Productat Inaugural Hackathon")
+  submissionsOpen  Boolean @default(true)
+  judgingOpen      Boolean @default(false)
+  resultsPublished Boolean @default(false)
+}
+
+// Pre-launch waitlist signups from the marketing site.
+model Waitlist {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  interest  String? // what they want to build / their background
+  createdAt DateTime @default(now())
+}

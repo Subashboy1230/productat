@@ -1,22 +1,23 @@
-import { Clock, MapPin, Rocket } from "lucide-react";
+import { Rocket, Sparkles, Users, MapPin, ArrowRight } from "lucide-react";
 
 import { SectionHeading } from "@/components/site/section-heading";
+import { Button } from "@/components/ui/button";
 
 const format = [
   {
-    icon: Clock,
-    title: "36-hour build sprint",
-    body: "Friday night to Sunday afternoon. Form a team of up to four, pick a track, and ship something that actually runs.",
-  },
-  {
-    icon: MapPin,
-    title: "In person in the Bay",
-    body: "Our SoMa HQ runs the flagship event. Can't make SF? Join from a satellite node in 12 cities across the US.",
+    icon: Sparkles,
+    title: "Beginner-friendly by design",
+    body: "You do not need to code. Mentors, starters, and AI tools are on hand, and teams are mixed by skill so everyone contributes and everyone learns.",
   },
   {
     icon: Rocket,
-    title: "Demo or it didn't happen",
-    body: "No slideware. Every team gets two minutes on the Demo Day stage to put a working product in front of judges.",
+    title: "Idea to shipped in a weekend",
+    body: "Pick an idea, work it across all four lenses (UX/UI, product, tech, GTM), and walk out with something real you can put in front of people.",
+  },
+  {
+    icon: Users,
+    title: "Mentors in the room",
+    body: "Designers, engineers, product folks, and operators floating the room to unblock you the moment you get stuck, not a week later.",
   },
 ];
 
@@ -25,17 +26,24 @@ export function Hackathon() {
     <section id="hackathon" className="relative scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeading
-          eyebrow="The Hackathon"
+          eyebrow="The inaugural hackathon"
           title={
             <>
-              36 hours. One demo.{" "}
-              <span className="text-muted-foreground">No filler.</span>
+              Our first hackathon.{" "}
+              <span className="text-muted-foreground">Late July.</span>
             </>
           }
-          description="Productat hackathons are built for people who would rather ship than pitch. Show up with an idea, leave with a product and a team that ships."
+          description="The community's first build weekend. Show up with an idea and a willingness to learn, leave with a shipped 0-to-1 product and people who'll keep building with you."
         />
 
-        <div className="mt-14 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 flex items-center justify-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-4 py-1.5 text-sm text-muted-foreground">
+            <MapPin className="h-4 w-4 text-primary" />
+            San Francisco Bay Area, late July 2026
+          </span>
+        </div>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
           {format.map((f) => (
             <div
               key={f.title}
@@ -52,6 +60,17 @@ export function Hackathon() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <Button size="lg" asChild>
+            <a href="#waitlist">
+              Join the waitlist <ArrowRight className="h-4 w-4" />
+            </a>
+          </Button>
+          <p className="text-sm text-muted-foreground">
+            Spots are limited for the first one. Waitlist members hear first.
+          </p>
         </div>
       </div>
     </section>

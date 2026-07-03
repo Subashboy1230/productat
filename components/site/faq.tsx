@@ -8,28 +8,28 @@ import {
 
 const faqs = [
   {
-    q: "Who can apply?",
-    a: "Anyone who builds: engineers, designers, PMs, founders, and students. Come solo or with a team of up to four. You don't need a polished idea in advance; plenty of teams form Friday night.",
+    q: "Do I need to know how to code?",
+    a: "No. Productat is built for non-technical people. You'll learn enough about how systems work to build with AI tools and to talk to engineers, plus the product, design, and go-to-market skills that matter just as much.",
   },
   {
-    q: "How much does it cost?",
-    a: "Hackathon tickets are free for accepted builders. The community has a free tier you can join today; an optional supporter membership unlocks office hours, credits, and member events.",
+    q: "Who is this actually for?",
+    a: "Non-technical founders, designers, PMs, domain experts, and career-switchers, anyone with an idea and no clear path to build it. If you're curious and want to ship, you belong here.",
   },
   {
-    q: "I'm not in the Bay Area. Can I still take part?",
-    a: "Absolutely. The flagship hackathon runs in San Francisco, but you can build from a satellite node in 12 cities, and the year-round community is fully remote with builders in 38 cities.",
+    q: "What will I learn?",
+    a: "Four lenses applied to building a real 0-to-1 product: UX/UI, first-principles product thinking, how the tech actually works (frontend, backend, APIs, databases, auth, and the nuances), and a builder's go-to-market mindset.",
   },
   {
-    q: "Do I need a team or an idea before I arrive?",
-    a: "Neither. Show up solo and we'll help you find a team during Friday's team formation. Bring an idea if you have one, or pick up a track prompt at kickoff.",
+    q: "When and where is the hackathon?",
+    a: "The inaugural hackathon is in late July 2026 in the San Francisco Bay Area. Join the waitlist and we'll send you the exact date, venue, and schedule as soon as they're locked.",
   },
   {
-    q: "What can I build?",
-    a: "Anything that fits one of the tracks (AI agents, developer tools, consumer, fintech, hardware, or wildcard) and can demo live in two minutes. Working beats polished.",
+    q: "What does the waitlist get me?",
+    a: "Early access to the community and first dibs on a spot at the inaugural hackathon. Spots are limited for the first one, and waitlist members hear before anyone else.",
   },
   {
-    q: "Who owns what I build?",
-    a: "You do. You keep full ownership of everything you create at a Productat event. Sponsors get visibility and the chance to support you, never your IP.",
+    q: "Do I need an idea or a team?",
+    a: "Neither is required. Bring an idea if you have one, and we'll help you find teammates. Show up with just curiosity and we'll help you find both.",
   },
 ];
 
@@ -42,7 +42,7 @@ export function FAQ() {
             align="left"
             eyebrow="FAQ"
             title="Answers before you ask"
-            description="Still curious about something? Reach the team at hello@productat.com and we'll get back fast."
+            description="Still curious about something? Email hello@productat.com and we'll get back fast."
             className="lg:sticky lg:top-28 lg:self-start"
           />
 
