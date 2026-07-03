@@ -12,7 +12,7 @@ export function CTA() {
             <span className="eyebrow text-primary">Waitlist open</span>
           </div>
 
-          <h2 className="display mx-auto mt-5 max-w-2xl text-balance text-4xl font-medium leading-[1.05] tracking-tight sm:text-5xl">
+          <h2 className="display mx-auto mt-5 max-w-2xl text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             Be first in line to build
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-muted-foreground sm:text-lg">

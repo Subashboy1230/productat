@@ -51,7 +51,7 @@ export function Hero() {
           </div>
 
           <h1
-            className="display mt-7 text-5xl font-medium leading-[1.02] tracking-tight sm:text-6xl md:text-[4.5rem] animate-fade-up"
+            className="display mt-7 text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl md:text-[4.5rem] animate-fade-up"
             style={{ animationDelay: "60ms" }}
           >
             Build real products,

@@ -30,7 +30,7 @@ export function SectionHeading({
         <span className="h-px w-6 bg-primary" />
         <span className="eyebrow text-primary">{eyebrow}</span>
       </div>
-      <h2 className="display mt-5 text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-5xl">
+      <h2 className="display mt-5 text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl">
         {title}
       </h2>
       {description && (
