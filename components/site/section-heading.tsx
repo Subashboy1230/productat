@@ -23,14 +23,14 @@ export function SectionHeading({
     >
       <div
         className={cn(
-          "inline-flex items-center gap-2 rounded-full border border-border bg-secondary/30 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground",
-          align === "center" && "mx-auto"
+          "flex items-center gap-2",
+          align === "center" && "justify-center"
         )}
       >
-        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-        {eyebrow}
+        <span className="h-px w-6 bg-primary" />
+        <span className="eyebrow text-primary">{eyebrow}</span>
       </div>
-      <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight sm:text-4xl md:text-[2.75rem] md:leading-[1.1]">
+      <h2 className="display mt-5 text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-5xl">
         {title}
       </h2>
       {description && (

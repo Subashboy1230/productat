@@ -2,20 +2,17 @@ import { WaitlistForm } from "@/components/site/waitlist-form";
 
 export function CTA() {
   return (
-    <section id="waitlist" className="relative scroll-mt-24 py-12 sm:py-20">
+    <section id="waitlist" className="relative scroll-mt-24 py-14 sm:py-20">
       <div className="mx-auto max-w-[1200px] px-6">
-        <div className="border-gradient relative overflow-hidden rounded-3xl border border-border bg-card px-6 py-16 text-center ring-hairline sm:px-12 sm:py-20">
-          <div className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-grid bg-grid-fade opacity-60" />
-            <div className="absolute left-1/2 top-0 h-[320px] w-[680px] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px]" />
+        <div className="relative overflow-hidden rounded-2xl border border-border bg-card px-6 py-16 text-center ring-hairline sm:px-12 sm:py-20">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-primary" />
+
+          <div className="flex items-center justify-center gap-2">
+            <span className="h-px w-6 bg-primary" />
+            <span className="eyebrow text-primary">Waitlist open</span>
           </div>
 
-          <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary/40 px-3 py-1 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Waitlist open
-          </div>
-
-          <h2 className="mx-auto max-w-2xl text-balance text-3xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="display mx-auto mt-5 max-w-2xl text-balance text-4xl font-medium leading-[1.05] tracking-tight sm:text-5xl">
             Be first in line to build
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-muted-foreground sm:text-lg">
@@ -28,7 +25,7 @@ export function CTA() {
             <WaitlistForm label="Join the waitlist" withInterest />
           </div>
 
-          <p className="mt-4 text-xs text-muted-foreground">
+          <p className="mt-4 font-mono text-xs text-muted-foreground">
             Free to join, built for non-technical builders, no spam ever
           </p>
         </div>
