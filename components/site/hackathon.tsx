@@ -23,7 +23,7 @@ const format = [
 
 export function Hackathon() {
   return (
-    <section id="hackathon" className="relative scroll-mt-24 py-24 sm:py-32">
+    <section id="hackathon" className="relative scroll-mt-24 py-14 sm:py-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <SectionHeading
           eyebrow="The inaugural hackathon"

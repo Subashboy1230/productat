@@ -35,7 +35,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="relative scroll-mt-24 py-24 sm:py-32">
+    <section id="faq" className="relative scroll-mt-24 py-14 sm:py-20">
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <SectionHeading

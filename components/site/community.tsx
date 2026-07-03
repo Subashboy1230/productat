@@ -69,7 +69,7 @@ const messages = [
 
 export function Community() {
   return (
-    <section id="community" className="relative scroll-mt-24 py-24 sm:py-32">
+    <section id="community" className="relative scroll-mt-24 py-14 sm:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute left-[10%] top-[30%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[120px]" />
       </div>
