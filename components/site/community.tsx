@@ -45,26 +45,30 @@ const perks = [
 
 const messages = [
   {
-    initials: "MK",
     name: "maya.k",
-    color: "from-sky-400 to-blue-600",
+    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
     text: "shipped my first landing page tonight, zero code, straight from Tuesday's workshop 🎉",
     meta: "2m",
   },
   {
-    initials: "DJ",
     name: "deon (non-tech founder)",
-    color: "from-indigo-400 to-violet-600",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     text: "finally get what an API actually does. six months of confusion gone in one session",
     meta: "14m",
   },
   {
-    initials: "RT",
     name: "rosa.t",
-    color: "from-cyan-400 to-sky-600",
+    avatar: "https://randomuser.me/api/portraits/women/12.jpg",
     text: "anyone want to pair for the hackathon? I'll bring product + GTM, looking for a build partner 🚀",
     meta: "31m",
   },
+];
+
+const faces = [
+  "https://randomuser.me/api/portraits/women/44.jpg",
+  "https://randomuser.me/api/portraits/men/46.jpg",
+  "https://randomuser.me/api/portraits/women/68.jpg",
+  "https://randomuser.me/api/portraits/men/75.jpg",
 ];
 
 export function Community() {
@@ -89,15 +93,14 @@ export function Community() {
           <div className="grid lg:grid-cols-2">
             <div className="flex flex-col justify-center p-8 sm:p-10">
               <div className="flex -space-x-2">
-                {[
-                  "from-sky-400 to-blue-600",
-                  "from-indigo-400 to-violet-600",
-                  "from-cyan-400 to-sky-600",
-                  "from-blue-400 to-indigo-600",
-                ].map((c, i) => (
-                  <span
+                {faces.map((src, i) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
                     key={i}
-                    className={`h-9 w-9 rounded-full bg-gradient-to-br ${c} ring-2 ring-card`}
+                    src={src}
+                    alt=""
+                    loading="lazy"
+                    className="h-9 w-9 rounded-full object-cover ring-2 ring-card"
                   />
                 ))}
                 <span className="grid h-9 w-9 place-items-center rounded-full border border-border bg-secondary text-xs font-medium text-muted-foreground ring-2 ring-card">
@@ -129,11 +132,13 @@ export function Community() {
                     key={m.name}
                     className="flex gap-3 rounded-xl border border-border bg-card/60 p-3"
                   >
-                    <span
-                      className={`grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gradient-to-br ${m.color} text-[11px] font-semibold text-white`}
-                    >
-                      {m.initials}
-                    </span>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={m.avatar}
+                      alt=""
+                      loading="lazy"
+                      className="h-8 w-8 shrink-0 rounded-full object-cover"
+                    />
                     <div className="min-w-0">
                       <div className="flex items-center gap-2">
                         <span className="truncate text-sm font-medium">

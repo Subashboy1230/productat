@@ -55,7 +55,7 @@ export function Navbar() {
             <a href="/login">Sign in</a>
           </Button>
           <Button size="sm" asChild>
-            <a href="#waitlist">Join waitlist</a>
+            <a href="#waitlist">Apply</a>
           </Button>
         </div>
 
@@ -88,7 +88,7 @@ export function Navbar() {
             </Button>
             <Button size="sm" asChild>
               <a href="#waitlist" onClick={() => setOpen(false)}>
-                Waitlist
+                Apply
               </a>
             </Button>
           </div>

@@ -65,11 +65,11 @@ export function Hackathon() {
         <div className="mt-8 flex flex-col items-center gap-3">
           <Button size="lg" asChild>
             <a href="#waitlist">
-              Join the waitlist <ArrowRight className="h-4 w-4" />
+              Apply to join <ArrowRight className="h-4 w-4" />
             </a>
           </Button>
           <p className="text-sm text-muted-foreground">
-            Spots are limited for the first one. Waitlist members hear first.
+            Spots are limited and approved. Apply early to make the first cohort.
           </p>
         </div>
       </div>

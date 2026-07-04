@@ -18,7 +18,7 @@ function SubmitButton({ label }: { label: string }) {
 }
 
 export function WaitlistForm({
-  label = "Join the waitlist",
+  label = "Apply to join",
   withInterest = false,
   id,
 }: {
@@ -36,8 +36,8 @@ export function WaitlistForm({
       <div className="mx-auto flex max-w-md items-center gap-3 rounded-xl border border-emerald-500/40 bg-emerald-500/10 px-5 py-4 text-left text-sm text-emerald-400">
         <CheckCircle2 className="h-5 w-5 shrink-0" />
         <span>
-          You&rsquo;re on the list. We&rsquo;ll email you the moment the doors
-          open.
+          Thanks for applying. We review every request and will email you once
+          you&rsquo;re approved.
         </span>
       </div>
     );

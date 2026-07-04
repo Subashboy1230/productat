@@ -73,7 +73,10 @@ export function Hero() {
             className="mt-9 animate-fade-up"
             style={{ animationDelay: "180ms" }}
           >
-            <WaitlistForm label="Join the waitlist" />
+            <WaitlistForm label="Apply to join" />
+            <p className="mt-3 text-xs text-muted-foreground">
+              Applications are reviewed. We approve builders on a rolling basis.
+            </p>
             <a
               href="#learn"
               className="mt-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"

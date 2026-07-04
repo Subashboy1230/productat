@@ -24,8 +24,8 @@ const faqs = [
     a: "The inaugural hackathon is in late July 2026 in the San Francisco Bay Area. Join the waitlist and we'll send you the exact date, venue, and schedule as soon as they're locked.",
   },
   {
-    q: "What does the waitlist get me?",
-    a: "Early access to the community and first dibs on a spot at the inaugural hackathon. Spots are limited for the first one, and waitlist members hear before anyone else.",
+    q: "Is it open to everyone, or do I apply?",
+    a: "You apply, and we review every request. We approve builders on a rolling basis, so applying early helps. Approved members get first dibs on a spot at the inaugural hackathon.",
   },
   {
     q: "Do I need an idea or a team?",
